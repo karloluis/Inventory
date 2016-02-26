@@ -10,13 +10,18 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="" ><a id="home-nav" href="/">Home</a></li>
-        <li class=""><a id="inventory-nav" href="/inventory">Inventory</a></li>
-        <li class=""><a href="#">Projects</a></li>
-        <li class=""><a href="#">Contact</a></li>
+        <li><a id="home-nav" href="/">Home</a></li>
+        <li>
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/inventory">Inventory<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/inventory/new/item">New Item</a></li>
+              <li><a href="/inventory/restock">Restock</a></li>
+              <li><a href="/inventory/refund">Refund</a></li>
+            </ul>
+        </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li class=""><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
     </div>
   </div>

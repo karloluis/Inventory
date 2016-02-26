@@ -44,4 +44,17 @@ router.route('/new/item')
 
 })
 
+
+router.route('/restock')
+.post( (req, res, next) => {
+
+})
+
+router.route('/refund/')
+.get( (req, res, next) => {
+  models.Transaction.find({}, (err, transaction) => {
+    res.render('refund', {title: "Refund", transaction: transaction})
+  })
+})
+
 module.exports = router;
