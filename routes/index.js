@@ -10,6 +10,8 @@ router.get('/new', (req, res, next) => {
 
 })
 
+router.use('/store', require('./store'))
+
 router.use('/inventory', require('./inventory'))
 
 module.exports = router;

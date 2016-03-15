@@ -46,14 +46,17 @@ router.route('/new/item')
 
 
 router.route('/restock')
+.get( (req, res, next) => {
+  res.redirect('/inventory')
+})
 .post( (req, res, next) => {
 
 })
 
-router.route('/refund/')
+router.route('/refund')
 .get( (req, res, next) => {
-  models.Transaction.find({}, (err, transaction) => {
-    res.render('refund', {title: "Refund", transaction: transaction})
+  models.Transaction.find({"action": "purchased"}, (err, transactions) => {
+    res.render('refund', {title: "Refund", transactions: transactions})
   })
 })
 

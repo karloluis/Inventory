@@ -7,7 +7,7 @@ var transactionSchema = mongoose.Schema({
     type : String,
     validate : {
       validator : (str) => {
-        return (["register", "restock", "sale", "refund"].indexOf(str) != -1)
+        return (["register", "restock", "sale", "refund", "purchased"].indexOf(str) != -1)
       },
       message : "{VALUE} is not a valid action!"
     }
